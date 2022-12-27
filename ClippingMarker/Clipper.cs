@@ -289,7 +289,7 @@ namespace ClippingMarker
             {
                 if ((node.e3.PolyType == "subject") && (node.e3.Side == 1) && (node.e1.PolyType == "clip") && (node.e1.Side == 2))
                 {
-                    if (Angle(node.e1) > Angle(node.e3))
+                    if (Angle(node.e1) < Angle(node.e3))
                     {
                         node.e1.Checked = true;
                         node.e1.InnerSide = 3;
@@ -316,7 +316,7 @@ namespace ClippingMarker
                 {
                     if ((node.e1.PolyType == "subject") && (node.e1.Side == 1) && (node.e3.PolyType == "clip") && (node.e3.Side == 2))
                     {
-                        if (Angle(node.e1) < Angle(node.e3))
+                        if (Angle(node.e1) > Angle(node.e3))
                         {
                             node.e1.Checked = true;
                             node.e1.InnerSide = 3;
