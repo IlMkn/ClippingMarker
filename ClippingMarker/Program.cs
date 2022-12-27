@@ -22,17 +22,6 @@ namespace ClippingMarker
             Point[] clip = new Point[] { new Point(40, 35), new Point(90, 60), new Point(80, 80) };
 
             clipper.ShowClip(subject, clip);
-
-            Console.WriteLine("Проверка результата");
-
-            int i = 1;
-            foreach (var edge in clipper.Result)
-            {
-                Console.WriteLine();
-                Console.WriteLine("{0} ребро: {1} - {2} || {3} - {4}", i, edge.start.X, edge.start.Y, edge.finish.X, edge.finish.Y);
-                Console.WriteLine("Маркер ребра - {0}", edge.Checked);
-                i++;
-            }
         }
     }
 }

@@ -58,6 +58,17 @@ namespace ClippingMarker
             Result.Clear();
             ProcessNodes();
             UpdateEdges();
+
+            Console.WriteLine("Вывод результата");
+
+            i = 1;
+            foreach (var edge in Result)
+            {
+                Console.WriteLine();
+                Console.WriteLine("{0} ребро: {1} - {2} || {3} - {4}", i, edge.start.X, edge.start.Y, edge.finish.X, edge.finish.Y);
+                Console.WriteLine("Маркер ребра - {0}", edge.Checked);
+                i++;
+            }
         }
 
         //сбрасывает параметр ребра, отвечающий за имеющиеся у него пересечения
